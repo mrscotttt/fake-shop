@@ -1,4 +1,4 @@
-Auther: Anucha Pipi
+Auther: Anucha Pipit
 
 demo project => [my-fake-shop.vercel.app/cart](https://my-fake-shop.vercel.app/cart)  (Good with 80% screen.)
 
