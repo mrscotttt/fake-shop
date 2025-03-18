@@ -1,7 +1,6 @@
-
 import { useForm } from "react-hook-form";
 import { ICartItemForm } from "./interface";
-import { MockCartItem } from "./mockData";
+import { MockCartItem } from "./config-json";
 
 export const useCartController = () => {
   const formHandler = useForm<ICartItemForm>({
@@ -9,7 +8,6 @@ export const useCartController = () => {
       ...MockCartItem,
     },
   });
-  // const formHandler = useForm<ICartItemForm>();
   const cartDetail = formHandler.watch();
   return { formHandler, cartDetail };
 };

@@ -23,7 +23,7 @@ export const MockCartItem: ICartItemForm = {
     },
     {
       quantity: 1,
-      totalPrice: 3400,
+      totalPrice: 4300,
       itemDetail: {
         itemCode: "JD01",
         itemDesc: "Air Jordan 1 Low",
@@ -31,7 +31,7 @@ export const MockCartItem: ICartItemForm = {
         itemType: "sneaker",
         itemSubType: "wearing_sneaker",
         sizing: true,
-        price: 3400,
+        price: 4300,
         status: "stock",
         size: "10",
         watchList: false,
