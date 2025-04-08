@@ -23,7 +23,7 @@ export const CarouselPlugin: React.FC<CarouselSlideProps> = (props) => {
       <CarouselContent className="w-full ml-auto item-center">
         {props.slideText.map((value, index) => (
           <CarouselItem key={index} className="w-full !pl-0 my-auto">
-            <div className="text-[14px] text-black bg-[#F5F5F5] font-[600] h-[70px] p-[26px] text-center item-center">
+            <div className="text-[12px] border-b-1 text-black bg-[#F5F5F5] font-[600] h-[43px] p-[14px] text-center item-center">
               {value}
             </div>
           </CarouselItem>

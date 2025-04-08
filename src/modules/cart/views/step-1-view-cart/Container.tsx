@@ -40,7 +40,7 @@ export const CartStep1Container: FC<IcommonProps> = (props) => {
   const CartList = () => {
     return (
       <div className="">
-        <div className="text-[28px] font-left mb-[8px] font-[500]">ตะกร้า</div>
+        <div className="text-[24px] font-left mb-[8px] font-[600]">ตะกร้า</div>
 
         <div>
           {cartDetail?.item.map((item: ISelectItemDetail, index) => {
@@ -61,36 +61,36 @@ export const CartStep1Container: FC<IcommonProps> = (props) => {
   const PrictList = () => {
     return (
       <div className="!text-left mb-[100px] mb-[96px]">
-        <div className="text-[28px] font-medium mb-[8px]">สรุป</div>
+        <div className="text-[24px] font-medium mb-[20px]">สรุป</div>
         <div className="flex justify-between">
           <div className="!text-left w-[full]">
-            <div className="!flex text-[20px]">
+            <div className="!flex text-[16px] mb-[6px]">
               ยอดรวมย่อย
-              <AiFillQuestionCircle className="text-[18px] mt-[5px] ml-[8px]" />
+              <AiFillQuestionCircle className="text-[16px] mt-[3px] ml-[8px]" />
             </div>
           </div>
 
-          <div className="!text-right text-[18px]">
+          <div className="!text-right text-[14px]">
             {formatBaht(cartDetail?.price)}
           </div>
         </div>
 
         <div className="flex justify-between">
           <div className="!text-left w-[full]">
-            <div className="!flex text-[20px]">
+            <div className="!flex text-[16px] ">
               ค่าธรรมเนียมการจัดส่งและดำเนินการโดยประมาณ
             </div>
           </div>
 
-          <div className="!text-right text-[18px]">ฟรี</div>
+          <div className="!text-right text-[16px]">ฟรี</div>
         </div>
 
         <div className="flex justify-between mt-[24px]">
           <div className="!text-left w-[full]">
-            <div className="!flex text-[20px] font-bold">ยอดรวม</div>
+            <div className="!flex text-[16px] font-bold mb-[6px]">ยอดรวม</div>
           </div>
 
-          <div className="!text-right text-[18px] font-bold">
+          <div className="!text-right text-[14px] font-bold">
             {formatBaht(cartDetail?.price)}
           </div>
         </div>
@@ -100,11 +100,11 @@ export const CartStep1Container: FC<IcommonProps> = (props) => {
             calculateDiscount.coupon ? "" : "hidden"
           }`}
         >
-          <div className="!text-left w-[full]">
-            <div className="!flex text-[20px]">ส่วนลดจากคูปอง</div>
+          <div className="!text-left w-[full] mb-[6px]">
+            <div className="!flex text-[16px]">ส่วนลดจากคูปอง</div>
           </div>
 
-          <div className="!text-right text-[18px] text-red-500">
+          <div className="!text-right text-[14px] text-red-500">
             -{formatBaht(calculateDiscount.coupon)}
           </div>
         </div>
@@ -116,11 +116,11 @@ export const CartStep1Container: FC<IcommonProps> = (props) => {
               : "hidden"
           }`}
         >
-          <div className="!text-left w-[full]">
-            <div className="!flex text-[20px]">ใช้ point แทนเงินส่วนลด</div>
+          <div className="!text-left w-[full] mb-[6px]">
+            <div className="!flex text-[16px] ">ใช้ point แทนเงินส่วนลด</div>
           </div>
 
-          <div className="!text-right text-[18px] text-red-500">
+          <div className="!text-right text-[14px] text-red-500 mb-[6px]">
             -{formatBaht(calculateDiscount.point)}
           </div>
         </div>
@@ -131,12 +131,12 @@ export const CartStep1Container: FC<IcommonProps> = (props) => {
           }`}
         >
           <div className="!text-left w-[full]">
-            <div className="!flex text-[20px]">
+            <div className="!flex text-[16px] mb-[6px]">
               ส่วนลดจากคูปองส่วนลดเพิ่มเติม
             </div>
           </div>
 
-          <div className="!text-right text-[18px] text-red-500">
+          <div className="!text-right text-[14px] text-red-500">
             -{formatBaht(calculateDiscount.ontop)}
           </div>
         </div>
@@ -146,11 +146,11 @@ export const CartStep1Container: FC<IcommonProps> = (props) => {
             calculateDiscount.seasonal ? "" : "hidden"
           }`}
         >
-          <div className="!text-left w-[full]">
-            <div className="!flex text-[20px]">ส่วนลดจากคูปองแคมเปญ</div>
+          <div className="!text-left w-[full] mb-[6px]">
+            <div className="!flex text-[16px] ">ส่วนลดจากคูปองแคมเปญ</div>
           </div>
 
-          <div className="!text-right text-[18px] text-red-500">
+          <div className="!text-right text-[14px] text-red-500">
             -{formatBaht(calculateDiscount.seasonal)}
           </div>
         </div>
@@ -161,10 +161,10 @@ export const CartStep1Container: FC<IcommonProps> = (props) => {
           }`}
         >
           <div className="!text-left w-[full]">
-            <div className="!flex text-[20px]">ยอดที่ต้องชำระ</div>
+            <div className="!flex text-[16px] ">ยอดที่ต้องชำระ</div>
           </div>
 
-          <div className="!text-right text-[18px]">
+          <div className="!text-right text-[14px]">
             {formatBaht(calculatePrice)}
           </div>
         </div>
@@ -402,15 +402,15 @@ export const CartStep1Container: FC<IcommonProps> = (props) => {
         </Dialog>
 
         <div className="!block">
-          <Button className="!block item-center !mt-[32px] my-[10px] text-[20px]  w-full  h-[64px] rounded-full">
+          <Button className="!block item-center !mt-[32px] my-[10px] text-[16px]  w-full  h-[64px] rounded-full">
             บุคคลทั่วไปเช็คเอาท์
           </Button>
-          <Button className="!block item-center my-[10px] text-[20px] w-full h-[64px] rounded-full">
+          <Button className="!block item-center my-[10px] text-[16px] w-full h-[64px] rounded-full">
             สมาชิกเช็คเอาท์
           </Button>
           <Button
             variant="ghost"
-            className="!block bg-[#F5F5F5] border-2 !item-center my-[10px] text-[20px]  w-full h-[64px] rounded-full"
+            className="!block bg-[#F5F5F5] border-2 !item-center my-[10px] text-[16px]  w-full h-[64px] rounded-full"
           >
             <Image
               className="!item-center mx-auto"
@@ -428,15 +428,15 @@ export const CartStep1Container: FC<IcommonProps> = (props) => {
 
   return (
     <div className="!min-h-screen !pb-[500px]">
-      <div className="flex p-8">
+      <div className="flex px-[32px]">
         <div className="size-14 grow-7 p-8">{CartList()}</div>
         <div className="size-14 grow-4 p-8">{PrictList()}</div>
       </div>
-      <div className="fixed bottom-0 left-0 p-[16px] w-full bg-white border-2 text-white text-center">
-        <Button className="item-center text-[20px] w-full h-[64px] rounded-full">
+      {/* <div className="fixed bottom-0 left-0 p-[16px] w-full bg-white border-2 text-white text-center">
+        <Button className="item-center text-[16px] w-full h-[64px] rounded-full">
           ไปที่เช็คเอาท์
         </Button>
-      </div>
+      </div> */}
     </div>
   );
 };

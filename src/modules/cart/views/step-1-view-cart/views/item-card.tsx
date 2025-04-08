@@ -16,18 +16,17 @@ interface props {
 export const ItemCard: FC<props> = ({ item, index, setWatchList }) => {
   return (
     <div className="py-[12px]">
-      <hr className="border-t border-gray-300 mb-[24px]"></hr>
       <div className="flex">
         <div className="">
           <Image
             src={item.itemDetail?.imgSource}
             alt="Description of image"
-            width={200}
+            width={164}
             height={164}
             layout="intrinsic"
           />
           <div className="flex justify-between">
-            <div className="text-center mt-[8px] border-2 border-gray-200 rounded-full p-2 w-[100px] h-[40px]  text-[16px]">
+            <div className="text-center mt-[8px] border-2 border-gray-200 rounded-full p-2 w-[100px] h-[40px] text-[16px] mr-[4px]">
               <div className="flex justify-between">
                 {item.quantity === 1 ? (
                   <RiDeleteBinLine className="text-[20px]" />
@@ -53,25 +52,26 @@ export const ItemCard: FC<props> = ({ item, index, setWatchList }) => {
             </div>
           </div>
         </div>
-        <div className="w-full p-[16px]">
+        <div className="w-full px-[16px]">
           <div className="!flex !justify-between">
             <div className="!text-left w-[full]">
-              <div className="text-[18px] font-bold">
+              <div className="text-[16px] font-bold mb-[6px]">
                 {item.itemDetail.itemDesc}
               </div>
-              <div className="text-[18px] font-light">
+              <div className="text-[16px] font-light mb-[6px]">
                 {item.itemDetail.itemSubDesc}
               </div>
-              <div className="text-[18px] font-light">
+              <div className="text-[16px] font-light mb-[6px]">
                 {`ไซส์ ${item.itemDetail.size}`}
               </div>
             </div>
-            <div className="!text-right text-[18px] font-bold">
+            <div className="!text-right text-[16px] font-bold">
               {formatBaht(item.totalPrice)}
             </div>
           </div>
         </div>
       </div>
+      <hr className="border-t border-gray-300 mt-[36px]"></hr>
     </div>
   );
 };
